@@ -1,0 +1,36 @@
+Data Source: Sample dataset from Microsoft Power BI
+
+-->Loaded the Data into Power Query Editor.
+
+1.Created four duplicates of the main table to form a FACT table and DIMENSION tables formation.
+2.Merged into date col and changed the ,erged col data type to date.
+3.Make changes to create following Dimension tables.
+
+	DIM_Segment:
+		1. Chose to keep only the Segment column.
+		2.Removed the duplicates from the Segment column.
+		3.Added an index column and renamed into Segment ID with index starting at 1 and incrementing by 1
+
+	DIM_Country:
+		1. Chose to keep only the Country column.
+		2.Removed the duplicates from the Country column.
+		3.Added an index column and renamed into Country ID with index starting at 101 and incrementing by 1
+
+	DIM_Product:
+		1. Chose to keep only the Product column.
+		2.Removed the duplicates from the Product column.
+		3.Added an index column and renamed into Product ID with index starting at 1599 and incrementing by 7
+
+	DIM_Dicount:
+		1. Chose to keep only the Dicount band column.
+		2.Removed the duplicates from the Dicount band column.
+		3.Added an index column and renamed into Discount Value with index starting at 0 and incrementing by 5
+
+4.Merged all the dimension tables to the FACT_Financials(rename) table
+5.Removed all the text cols which already exist in dimension tables except its ids in the Fact table
+6.Load and Apply
+
+7. Create relationships between dimension and fact tables
+8.Change Date format in FACT
+9. Change col with currency value to appropriate currency symbol
+8. Creating and Editing Visuals
